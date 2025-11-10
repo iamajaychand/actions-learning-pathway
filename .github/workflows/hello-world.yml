@@ -1,0 +1,10 @@
+name: hello-world
+on: push #The push event runs workflow when you push a commit or tag, or when you create a repository from a template
+jobs:
+  hello-world-job:
+    runs-on: ubuntu-latest
+    steps:
+     - name: checkout the repository
+       uses: actions/checkout@v3
+     - run: echo "$(cat hello_world.txt)"
+    
